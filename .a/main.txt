@@ -1,0 +1,11 @@
+## DBMS : [PostgreSQL](https://www.postgresql.org/)
+## DB : ClassicModelsShop [MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/)
+
+
+## DBMS : [PostgreSQL](https://www.postgresql.org/)
+## DB : Yongmazon [Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/)
+
+
+## DBMS : [PostgreSQL](https://www.postgresql.org/)
+## DB : DVDRental [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
+
