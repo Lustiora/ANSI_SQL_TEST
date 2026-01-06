@@ -84,3 +84,5 @@
 ### **Step 5 (데이터 재구조화)** : 피벗(Pivot), 언피벗(Unpivot), JSON 처리 등 리포팅을 위한 변형.
 - **Middle** [매장별 가격대(Price Tier) 선호도 분석](https://github.com/Lustiora/SQL-TEST/issues/30)
 - **Middle** [경영진은 한눈에 보이는 데이터가 필요하다](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
+- **Middle** [테이블을 변환하여 보기 좋게 만들어줘](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
+- **Middle** [보고서 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
