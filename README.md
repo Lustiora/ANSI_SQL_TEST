@@ -1,88 +1,116 @@
-## SQL 문제를 찾아다니다가 AI로 만들어 공부하기 시작했습니다.
+# 🛠️ SQL 학습 및 실습 환경 가이드
 
-### 사용 DBMS , DB
-- DBMS : [PostgreSQL](https://www.postgresql.org/)
-- DB : ClassicModelsShop [MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/)
-- DB : DVDRental [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
-- DB : Yongmazon [Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/)
+이 프로젝트는 **PostgreSQL**을 기반으로 다양한 스키마의 데이터베이스를 활용하여 SQL 역량을 향상하는 것을 목표로 합니다.
 
-### 참고 사항
-- PostgreSQL에서 MySQL, Oracle Sample Database 를 사용하려면 변환이 필요합니다.
-- DB `.sql` 을 AI 에 입력하여 PostgreSQL 용으로 편집을 요청하시거나 해당하는 DBMS를 사용하시면 됩니다.
-- 답안 Issue는 PostgreSQL 문법으로 작성되어있습니다.
-- [목표](https://github.com/Lustiora/ANSI_SQL_TEST/issues/58)
+## 1. 사용 DBMS 및 데이터베이스 (Database)
 
-### 참고 링크
-- [DBeaver](https://dbeaver.io/)<br>
-- [w3schools PostgreSQL Tutorial](https://www.w3schools.com/postgresql/index.php)<br>
-- [DBMS 별 사용 가능 구문 정리](https://www.sql-workbench.eu/dbms_comparison.html)
-- [PostgreSQL 성능 최적화](https://edbkorea.com/blog/postgresql-oltp-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94/)
+실습은 **PostgreSQL** 환경에서 진행되며, 아래 3가지 샘플 데이터베이스를 사용합니다.
 
-### 해당 Project의 문제를 푸시기 전에 하단 링크의 문제를 풀어보시는걸 추천합니다.
-- [programmers SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit)
-- 영문 [leetcode](https://leetcode.com/studyplan/top-sql-50/)
+* **DBMS:** [PostgreSQL](https://www.postgresql.org/)
+* **실습용 DB 목록:**
+1. **ClassicModelsShop** ([MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/))
+2. **DVDRental** ([PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/))
+3. **Yongmazon** ([Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/))
 
-## 난이도 (Difficulty)
+## 2. 📌 참고 및 주의사항
 
-### **하 (Low)** :
-* 단일 테이블 혹은 단순 2개 테이블 조인.
-* 기본적인 `WHERE`, `GROUP BY`, `ORDER BY` 사용.
-* 문제의 요구사항이 SQL 문법과 1:1로 직관적으로 매칭되는 경우.
+타 DBMS(MySQL, Oracle) 기반의 샘플 데이터를 PostgreSQL에서 사용하기 위해 다음 사항을 유의해주세요.
 
-### **중 (Medium)** :
-* 3개 이상의 테이블 조인, 혹은 서브쿼리(Subquery) 활용.
-* `CASE WHEN`, `COALESCE`, 날짜/문자열 함수 등의 활용.
-* 논리적인 단계가 2단계 이상 필요함 (예: 먼저 집계하고, 그 결과를 다시 필터링).
+* **데이터 변환 필요:** MySQL, Oracle용 `.sql` 파일은 PostgreSQL 문법에 맞게 변환해야 합니다.
+> *Tip: AI에게 `.sql` 파일을 입력하여 PostgreSQL용으로 변환을 요청하거나, DBeaver 등의 도구를 활용하세요.*
 
-### **상 (High)** :
-* **윈도우 함수(Window Function)** 의 심화 활용 (`LAG`, `LEAD`, `Frame` 설정 등).
-* **재귀 쿼리(Recursive CTE)**, Self-Join, 복잡한 집합 연산.
-* 성능 최적화(Index) 고려 필요, 혹은 데이터 구조를 완전히 바꾸는(Pivot) 작업.
+* **답안 기준:** 모든 문제의 정답 쿼리(Issue)는 **PostgreSQL 문법**을 기준으로 작성되었습니다.
+* **프로젝트 목표:** [튜닝 : DB 엔진의 물리적 동작 방식을 이용하여 극한의 성능 추구](https://github.com/Lustiora/ANSI_SQL_TEST/issues/58)
 
-## 문제 목록
+## 3. 📚 유용한 도구 및 참고 자료
 
-### **Step 1 (논리적 구조화)** : 정확한 데이터 추출, 다중 조인(Join), 기본 집계.
-- **Low** ["천의 얼굴"을 가진 배우 찾기 (GROUP BY + HAVING)](https://github.com/Lustiora/SQL-TEST/issues/7)
-- **Middle** [전 세계 지사(Office)별 매출 효율성 분석 (Fan-out)](https://github.com/Lustiora/SQL-TEST/issues/5)
-- **Middle** [대륙별 창고 재고 자산 가치 평가 (Multi-join)](https://github.com/Lustiora/SQL-TEST/issues/9)
+실습을 진행하면서 참고하면 좋은 도구와 문서입니다.
 
-### **Step 2 (가독성과 효율성)** : `CTE`, `CASE WHEN`, `FILTER`, 문자열 처리 등 "깔끔한 쿼리" 작성.
-- **Middle** [카테고리별 평균 연체 기간 분석 (날짜/시간 Function)](https://github.com/Lustiora/SQL-TEST/issues/3)
-- **Middle** [VIP 고객 분류 및 소비 패턴 분석 (RFM 변형) (Join + 집계 + CTE)](https://github.com/Lustiora/SQL-TEST/issues/26)
-- **Middle** [이탈 고객(Churn) 발굴](https://github.com/Lustiora/SQL-TEST/issues/28)
-- **Middle** [고객 이메일 도메인 분석](https://github.com/Lustiora/SQL-TEST/issues/32)
-- **Middle** [영화별 출연 배우 리스트](https://github.com/Lustiora/SQL-TEST/issues/34)
-- **High** [제품 라인별 "평균 이상"의 프리미엄 제품 찾기 (중첩 CTE)](https://github.com/Lustiora/SQL-TEST/issues/13)
-- **High** [VIP 고객과 구매 성향 분석 (중첩 CTE)](https://github.com/Lustiora/SQL-TEST/issues/17)
+* **SQL 클라이언트 도구:** [DBeaver](https://dbeaver.io/) (추천)
+* **PostgreSQL 튜토리얼:** [w3schools PostgreSQL Tutorial](https://www.w3schools.com/postgresql/index.php)
+* **문법 비교:** [DBMS별 사용 가능 구문 정리](https://www.sql-workbench.eu/dbms_comparison.html)
+* **심화 학습:** [PostgreSQL 성능 최적화 가이드](https://edbkorea.com/blog/postgresql-oltp-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94/)
 
-### **Step 3 (물리적 최적화)** : 인덱스 원리, SARGable(가공 금지), 실행 속도 고려.
-- **Low** [인덱스가 있음에도 불구하고 1,000만 건 전체를 뒤지는(Full Table Scan) 현상이 발생하여 속도가 매우 느림](https://github.com/Lustiora/ANSI_SQL_TEST/issues/40)
-- **Low** [성능 저하의 주범찾기](https://github.com/Lustiora/ANSI_SQL_TEST/issues/42)
-- **Low** [인덱스를 타지 않고 Full Table Scan이 발생](https://github.com/Lustiora/ANSI_SQL_TEST/issues/44)
-- **Middle** [어떤 인덱스가 더 효율적인가?](https://github.com/Lustiora/ANSI_SQL_TEST/issues/46)
-- **Middle** [자유게시판 게시글 목록 로딩이 너무 느려요!](https://github.com/Lustiora/ANSI_SQL_TEST/issues/48)
-- **Middle** [인덱스를 걸었는데 왜 이렇게 조회가 느려](https://github.com/Lustiora/ANSI_SQL_TEST/issues/52)
-- **Middle** [게시글 가장 최근 댓글 10개를 출력하는데 CPU 사용량 100%](https://github.com/Lustiora/ANSI_SQL_TEST/issues/54)
-- **High** [인덱스를 걸었는데 왜 안 타지?](https://github.com/Lustiora/ANSI_SQL_TEST/issues/50)
-- **High** [옛날 로그를 보는데 왜 이렇게 느릴까](https://github.com/Lustiora/ANSI_SQL_TEST/issues/56)
+## 4. ✅ 사전 권장 문제 (Warm-up)
 
-### **Step 4 (고급 분석)** : 순서가 있는 데이터(`LAG`), 계층 구조(재귀), 복잡한 순위(`RANK`).
-- **Low** [3명의 심판이 서로 다른 결과를 원한다](https://github.com/Lustiora/ANSI_SQL_TEST/issues/61)
-- **Middle** [고객별 '마지막' 대여 영화 찾기](https://github.com/Lustiora/SQL-TEST/issues/36)
-- **Middle** [고객별 평균 재구매 주기](https://github.com/Lustiora/SQL-TEST/issues/38)
-- **Middle** [매일 아침 리포트로 매출액의 전체적인 추세를 알고 싶다](https://github.com/Lustiora/ANSI_SQL_TEST/issues/59)
-- **Middle** [각 부서 별 고연봉자 정리](https://github.com/Lustiora/ANSI_SQL_TEST/issues/63)
-- **Middle** [전날 대비 방문자 변동 사항](https://github.com/Lustiora/ANSI_SQL_TEST/issues/65)
-- **High** [영업 사원별 "최대 매출" 기여 카테고리 추출 (Join , Window Function)](https://github.com/Lustiora/SQL-TEST/issues/1)
-- **High** [월별 매출 성장률(MoM) 분석 (Window Function)](https://github.com/Lustiora/SQL-TEST/issues/11)
-- **High** [각 라인별 "재고 부족" 비상 제품 파악 (중첩 CTE)](https://github.com/Lustiora/SQL-TEST/issues/15)
-- **High** [2004년 제품 라인별 "베스트셀러"와 매출 기여도 분석 (중첩 CTE)](https://github.com/Lustiora/SQL-TEST/issues/19)
-- **High** [조직 계층별 팀 누적 매출 분석 (재귀 CTE)](https://github.com/Lustiora/SQL-TEST/issues/21)
-- **High** [매니저별 글로벌 시장 지배력 분석 (재귀 CTE + 집합 집계)](https://github.com/Lustiora/SQL-TEST/issues/24)
-- **High** [조직의 계층(Level) 파악](https://github.com/Lustiora/ANSI_SQL_TEST/issues/67)
+본 프로젝트의 문제를 풀기 전, 기초 실력을 점검하기 위해 아래 사이트의 문제들을 먼저 풀어보시는 것을 추천합니다.
 
-### **Step 5 (데이터 재구조화)** : 피벗(Pivot), 언피벗(Unpivot), JSON 처리 등 리포팅을 위한 변형.
-- **Middle** [매장별 가격대(Price Tier) 선호도 분석](https://github.com/Lustiora/SQL-TEST/issues/30)
-- **Middle** [경영진은 한눈에 보이는 데이터가 필요하다](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
-- **Middle** [테이블을 변환하여 보기 좋게 만들어줘](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
-- **Middle** [보고서 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
+* **국문:** [프로그래머스 SQL 고득점 Kit](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit)
+* **영문:** [LeetCode Top SQL 50](https://leetcode.com/studyplan/top-sql-50/)
+
+---
+
+### 1. 📊 SQL 난이도
+
+| 레벨 | 등급명 || 상세 기술 정의 | 요구 역량 |
+| --- | --- | --- | --- | --- |
+| **Lv.1** | **Bronze** |🥉| 단일 테이블 조회 및 단순 필터링 | 기본적인 `SELECT`, `WHERE` 문법 이해 및 단순 조건절 작성 능력 |
+| **Lv.2** | **Silver** |🥈| 기초적인 데이터 집계 및 가공 | `GROUP BY`, 내장 함수(문자열/날짜)를 활용한 1차원적인 데이터 요약 능력 |
+| **Lv.3** | **Gold** |🥇| 복합 논리 설계 및 다중 테이블 결합 | `JOIN`, `HAVING`, 서브쿼리 등 2개 이상의 개념을 조합하여 데이터 관계를 파악하는 능력 |
+| **Lv.4** | **Platinum** |🔶| 실행 계획 최적화 및 데이터 구조 변형 | 인덱스 원리 이해(최적화), `PIVOT`, 윈도우 함수 심화 등 데이터의 물리적/논리적 구조를 제어하는 능력 |
+| **Lv.5** | **Diamond** |💎| 알고리즘 구현 및 절차적 사고 | `RECURSIVE CTE`(재귀), 복잡한 비즈니스 로직(계층, 경로 분석)을 SQL로 구현하는 프로그래밍적 사고력 |
+
+---
+
+### 2. 📝 SQL 문제
+
+#### 🥉 Lv.1 Bronze (기초 체력)
+
+*기본적인 데이터 추출 및 단순 현상 파악 업무입니다.*
+
+* **[Step 1]** [배우별 출연작 장르 다양성 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/7)
+* **[Step 3]** [대용량 테이블 전체 조회(Full Scan) 발생 원인 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/40)
+* **[Step 3]** [특정 쿼리의 성능 저하 병목 구간 진단](https://github.com/Lustiora/ANSI_SQL_TEST/issues/42)
+* **[Step 3]** [인덱스 적용 실패 및 비효율적 스캔 원인 규명](https://github.com/Lustiora/ANSI_SQL_TEST/issues/44)
+* **[Step 4]** [심판별 채점 결과 비교 데이터 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/61)
+
+#### 🥈 Lv.2 Silver (데이터 가공)
+
+*데이터를 정리하여 통계 지표를 만드는 업무입니다.*
+
+* **[Step 2]** [카테고리별 평균 연체 기간 현황 파악](https://github.com/Lustiora/ANSI_SQL_TEST/issues/3)
+* **[Step 2]** [장기 미활동(Churn) 예상 고객 리스트 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/28)
+* **[Step 2]** [회원 가입 이메일 도메인 점유율 통계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/32)
+* **[Step 2]** [영화별 전체 출연진 목록(Cast List) 정리](https://github.com/Lustiora/ANSI_SQL_TEST/issues/34)
+* **[Step 5]** [보고서 작성을 위한 텍스트 서식 표준화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
+
+#### 🥇 Lv.3 Gold (논리적 연결)
+
+*여러 데이터를 조합하여 비즈니스 인사이트를 도출하거나, 성능 이슈를 해결하는 단계입니다.*
+
+* **[Step 1]** [해외 지사별 매출 효율성 및 기여도 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/5)
+* **[Step 1]** [대륙별 물류 창고 재고 자산 가치 평가](https://github.com/Lustiora/ANSI_SQL_TEST/issues/9)
+* **[Step 2]** [우수 고객(VIP) 구매 패턴 기반 그룹핑](https://github.com/Lustiora/ANSI_SQL_TEST/issues/26)
+* **[Step 3]** [조회 시나리오별 최적 인덱스 선정 전략](https://github.com/Lustiora/ANSI_SQL_TEST/issues/46)
+* **[Step 3]** [게시판 목록 로딩 지연 현상 해결](https://github.com/Lustiora/ANSI_SQL_TEST/issues/48)
+* **[Step 3]** [복합 조건 조회 시 발생하는 속도 저하 개선](https://github.com/Lustiora/ANSI_SQL_TEST/issues/52)
+* **[Step 3]** [댓글 조회 서비스의 시스템 CPU 부하 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/54)
+* **[Step 4]** [회원별 최근 대여 기록 조회](https://github.com/Lustiora/ANSI_SQL_TEST/issues/36)
+* **[Step 4]** [고객별 평균 재구매 주기 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/38)
+* **[Step 4]** [일별 전체 매출 추세 모니터링 리포트](https://github.com/Lustiora/ANSI_SQL_TEST/issues/59)
+* **[Step 4]** [부서별 급여 상위 구간 직원 현황](https://github.com/Lustiora/ANSI_SQL_TEST/issues/63)
+* **[Step 4]** [일일 방문자 증감(Diff) 추이 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/65)
+* **[Step 5]** [시각화 도구 연동을 위한 데이터 구조 변환](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
+
+#### 🔶 Lv.4 Platinum (고급 테크닉 & 최적화)
+
+*복잡한 분석 요구사항을 처리하거나, 까다로운 성능 문제를 튜닝하는 단계입니다.*
+
+* **[Step 2]** [제품 라인별 고수익 프리미엄 상품군 식별](https://github.com/Lustiora/ANSI_SQL_TEST/issues/13)
+* **[Step 2]** [VIP 고객 세그먼트별 구매 성향 심층 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/17)
+* **[Step 3]** [옵티마이저 실행 계획 이상(Anomaly) 점검](https://github.com/Lustiora/ANSI_SQL_TEST/issues/50)
+* **[Step 3]** [대용량 과거 로그 데이터 조회 속도 개선](https://github.com/Lustiora/ANSI_SQL_TEST/issues/56)
+* **[Step 4]** [영업 사원별 주력 판매 카테고리 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/1)
+* **[Step 4]** [월간 매출 성장률(MoM) 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/11)
+* **[Step 4]** [라인별 재고 부족 위험군 조기 탐지](https://github.com/Lustiora/ANSI_SQL_TEST/issues/15)
+* **[Step 4]** [연도별 베스트셀러 및 매출 비중 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/19)
+* **[Step 5]** [매장별 가격대 선호도 매트릭스 구성](https://github.com/Lustiora/ANSI_SQL_TEST/issues/30)
+* **[Step 5]** [임원 보고용 대시보드 데이터 포맷팅](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
+
+#### 💎 Lv.5 Diamond (알고리즘 & 마스터)
+
+*계층 구조나 경로 분석 등 복잡한 로직을 구현해야 하는 최상위 업무입니다.*
+
+* **[Step 4]** [조직 계층을 반영한 팀별 누적 실적 집계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/21)
+* **[Step 4]** [관리자별 관할 지역 시장 점유율 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/24)
+* **[Step 4]** [전체 조직 구조의 계층(Depth) 측정](https://github.com/Lustiora/ANSI_SQL_TEST/issues/67)
