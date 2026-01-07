@@ -20,6 +20,7 @@
 > *Tip: AI에게 `.sql` 파일을 입력하여 PostgreSQL용으로 변환을 요청하거나, DBeaver 등의 도구를 활용하세요.*
 
 * **답안 기준:** 모든 문제의 정답 쿼리(Issue)는 **PostgreSQL 문법**을 기준으로 작성되었습니다.
+* **힌트 정책:** 단계(Step)와 난이도가 상승할수록, 문제 해결 능력을 기르기 위해 힌트는 제공되지 않습니다.
 * **프로젝트 목표:** [튜닝 : DB 엔진의 물리적 동작 방식을 이용하여 극한의 성능 추구](https://github.com/Lustiora/ANSI_SQL_TEST/issues/58)
 
 ## 3. 📚 유용한 도구 및 참고 자료
@@ -40,7 +41,7 @@
 
 ---
 
-### 📚 SQL 학습 커리큘럼 (Step 1 ~ Step 8)
+### 📚 SQL 학습 커리큘럼
 
 | 스텝 | 주제 (Title) |  | 상세 기술 정의 | 요구 역량 |
 | --- | --- | --- | --- | --- |
@@ -57,7 +58,8 @@
 
 ### 📝 SQL 문제
 
-#### 🥉 Lv.1 Bronze (기초 체력) (단일 테이블 조회 및 단순 필터링) (기본적인 `SELECT`, `WHERE` 문법 이해 및 단순 조건절 작성 능력)
+#### 🥉 Lv.1 Bronze (기초 체력) 
+* (단일 테이블 조회 및 단순 필터링) (기본적인 `SELECT`, `WHERE` 문법 이해 및 단순 조건절 작성 능력)
 
 *기본적인 데이터 추출 및 단순 현상 파악 업무입니다.*
 
@@ -67,7 +69,8 @@
 * **[Step 3 ⚡]** [인덱스 적용 실패 및 비효율적 스캔 원인 규명](https://github.com/Lustiora/ANSI_SQL_TEST/issues/44)
 * **[Step 4 📈]** [심판별 채점 결과 비교 데이터 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/61)
 
-#### 🥈 Lv.2 Silver (데이터 가공) (기초적인 데이터 집계 및 가공) (`GROUP BY`, 내장 함수(문자열/날짜)를 활용한 1차원적인 데이터 요약 능력)
+#### 🥈 Lv.2 Silver (데이터 가공) 
+* (기초적인 데이터 집계 및 가공) (`GROUP BY`, 내장 함수(문자열/날짜)를 활용한 1차원적인 데이터 요약 능력)
 
 *데이터를 정리하여 통계 지표를 만드는 업무입니다.*
 
@@ -78,7 +81,8 @@
 * **[Step 5 🔄]** [보고서 작성을 위한 서식 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
 * **[Step 7 🎨]** [보고서 작성을 위한 날짜 표기 형식 표준화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/81)
 
-#### 🥇 Lv.3 Gold (논리적 연결) (복합 논리 설계 및 다중 테이블 결합) (`JOIN`, `HAVING`, 서브쿼리 등 2개 이상의 개념을 조합하여 데이터 관계를 파악하는 능력)
+#### 🥇 Lv.3 Gold (논리적 연결) 
+* (복합 논리 설계 및 다중 테이블 결합) (`JOIN`, `HAVING`, 서브쿼리 등 2개 이상의 개념을 조합하여 데이터 관계를 파악하는 능력)
 
 *여러 데이터를 조합하여 비즈니스 인사이트를 도출하거나, 성능 이슈를 해결하는 단계입니다.*
 
@@ -97,7 +101,8 @@
 * **[Step 5 🔄]** [데이터 구조 변환](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
 * **[Step 6 🔍]** [일별 매출 합산 후 평균 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/79)
 
-#### 🔶 Lv.4 Platinum (고급 테크닉 & 최적화) (실행 계획 최적화 및 데이터 구조 변형) (인덱스 원리 이해(최적화), `PIVOT`, 윈도우 함수 심화 등 데이터의 물리적/논리적 구조를 제어하는 능력)
+#### 🔶 Lv.4 Platinum (고급 테크닉 & 최적화) 
+* (실행 계획 최적화 및 데이터 구조 변형) (인덱스 원리 이해(최적화), `PIVOT`, 윈도우 함수 심화 등 데이터의 물리적/논리적 구조를 제어하는 능력)
 
 *복잡한 분석 요구사항을 처리하거나, 까다로운 성능 문제를 튜닝하는 단계입니다.*
 
@@ -109,12 +114,15 @@
 * **[Step 4 📈]** [월간 매출 성장률(MoM) 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/11)
 * **[Step 4 📈]** [라인별 재고 부족 위험군 조기 탐지](https://github.com/Lustiora/ANSI_SQL_TEST/issues/15)
 * **[Step 4 📈]** [연도별 베스트셀러 및 매출 비중 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/19)
+* **[Step 4 📈]** [카테고리별 연간 매출 성장률 (YoY) 분석 보고서](https://github.com/Lustiora/ANSI_SQL_TEST/issues/87)
 * **[Step 5 🔄]** [매장별 가격대 선호도 매트릭스 구성](https://github.com/Lustiora/ANSI_SQL_TEST/issues/30)
 * **[Step 5 🔄]** [임원 보고용 대시보드 데이터 포맷팅](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
 * **[Step 5 🔄]** [접속 로그(User Agent) 파싱 및 환경 데이터 구조화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/77)
+* **[Step 5 🔄]** [부서별 직원 근태 유형 요약 보고서](https://github.com/Lustiora/ANSI_SQL_TEST/issues/85)
 * **[Step 6 🔍]** [구매 이력이 존재하는 실사용 고객 명단 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/75)
 
-#### 💎 Lv.5 Diamond (알고리즘 & 마스터) (알고리즘 구현 및 절차적 사고) (`RECURSIVE CTE`(재귀), 복잡한 비즈니스 로직(계층, 경로 분석)을 SQL로 구현하는 프로그래밍적 사고력)
+#### 💎 Lv.5 Diamond (알고리즘 & 마스터) 
+* (알고리즘 구현 및 절차적 사고) (`RECURSIVE CTE`(재귀), 복잡한 비즈니스 로직(계층, 경로 분석)을 SQL로 구현하는 프로그래밍적 사고력)
 
 *계층 구조나 경로 분석 등 복잡한 로직을 구현해야 하는 최상위 업무입니다.*
 
