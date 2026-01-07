@@ -40,7 +40,7 @@
 
 ---
 
-### 1. 📊 SQL 난이도
+### 📊 SQL 난이도
 
 | 레벨 | 등급명 || 상세 기술 정의 | 요구 역량 |
 | --- | --- | --- | --- | --- |
@@ -52,7 +52,7 @@
 
 ---
 
-### 2. 📝 SQL 문제
+### 📝 SQL 문제
 
 #### 🥉 Lv.1 Bronze (기초 체력)
 
@@ -72,7 +72,8 @@
 * **[Step 2]** [장기 미활동(Churn) 예상 고객 리스트 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/28)
 * **[Step 2]** [회원 가입 이메일 도메인 점유율 통계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/32)
 * **[Step 2]** [영화별 전체 출연진 목록(Cast List) 정리](https://github.com/Lustiora/ANSI_SQL_TEST/issues/34)
-* **[Step 5]** [보고서 작성을 위한 텍스트 서식 표준화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
+* **[Step 5]** [보고서 작성을 위한 서식 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
+* **[Step 7]** [보고서 작성을 위한 날짜 표기 형식 표준화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/81)
 
 #### 🥇 Lv.3 Gold (논리적 연결)
 
@@ -90,7 +91,8 @@
 * **[Step 4]** [일별 전체 매출 추세 모니터링 리포트](https://github.com/Lustiora/ANSI_SQL_TEST/issues/59)
 * **[Step 4]** [부서별 급여 상위 구간 직원 현황](https://github.com/Lustiora/ANSI_SQL_TEST/issues/63)
 * **[Step 4]** [일일 방문자 증감(Diff) 추이 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/65)
-* **[Step 5]** [시각화 도구 연동을 위한 데이터 구조 변환](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
+* **[Step 5]** [데이터 구조 변환](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
+* **[Step 6]** [일별 매출 합산 후 평균 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/79)
 
 #### 🔶 Lv.4 Platinum (고급 테크닉 & 최적화)
 
@@ -106,6 +108,8 @@
 * **[Step 4]** [연도별 베스트셀러 및 매출 비중 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/19)
 * **[Step 5]** [매장별 가격대 선호도 매트릭스 구성](https://github.com/Lustiora/ANSI_SQL_TEST/issues/30)
 * **[Step 5]** [임원 보고용 대시보드 데이터 포맷팅](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
+* **[Step 5]** [접속 로그(User Agent) 파싱 및 환경 데이터 구조화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/77)
+* **[Step 6]** [구매 이력이 존재하는 실사용 고객 명단 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/75)
 
 #### 💎 Lv.5 Diamond (알고리즘 & 마스터)
 
