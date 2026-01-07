@@ -40,81 +40,85 @@
 
 ---
 
-### 📊 SQL 난이도
+### 📚 SQL 학습 커리큘럼 (Step 1 ~ Step 8)
 
-| 레벨 | 등급명 || 상세 기술 정의 | 요구 역량 |
+| 스텝 | 주제 (Title) |  | 상세 기술 정의 | 요구 역량 |
 | --- | --- | --- | --- | --- |
-| **Lv.1** | **Bronze** |🥉| 단일 테이블 조회 및 단순 필터링 | 기본적인 `SELECT`, `WHERE` 문법 이해 및 단순 조건절 작성 능력 |
-| **Lv.2** | **Silver** |🥈| 기초적인 데이터 집계 및 가공 | `GROUP BY`, 내장 함수(문자열/날짜)를 활용한 1차원적인 데이터 요약 능력 |
-| **Lv.3** | **Gold** |🥇| 복합 논리 설계 및 다중 테이블 결합 | `JOIN`, `HAVING`, 서브쿼리 등 2개 이상의 개념을 조합하여 데이터 관계를 파악하는 능력 |
-| **Lv.4** | **Platinum** |🔶| 실행 계획 최적화 및 데이터 구조 변형 | 인덱스 원리 이해(최적화), `PIVOT`, 윈도우 함수 심화 등 데이터의 물리적/논리적 구조를 제어하는 능력 |
-| **Lv.5** | **Diamond** |💎| 알고리즘 구현 및 절차적 사고 | `RECURSIVE CTE`(재귀), 복잡한 비즈니스 로직(계층, 경로 분석)을 SQL로 구현하는 프로그래밍적 사고력 |
+| **Step 1** | **논리적 구조화** | 🏗️ | 정규화된 테이블에서의 정확한 데이터 추출 | ERD(개체 관계) 이해, `JOIN`(Inner/Outer) 및 기초 집계(`GROUP BY`) 능력 |
+| **Step 2** | **가독성과 효율성** | 🧹 | 유지보수가 쉽고 논리적인 쿼리 작성 | `CTE`(With절) 활용, `CASE WHEN`을 통한 조건 분기, 가독성 높은 코드 습관 |
+| **Step 3** | **물리적 최적화** | ⚡ | DB 내부 동작 원리를 고려한 성능 튜닝 | 인덱스(Index) 구조 이해, **SARGable**(인덱스 태우기) 쿼리 작성, 실행 계획 분석 |
+| **Step 4** | **고급 분석** | 📈 | 순서와 흐름, 순위를 다루는 심화 통계 | **Window Function**(`RANK`, `LAG`, `LEAD`) 및 `PARTITION BY` 활용 능력 |
+| **Step 5** | **데이터 재구조화** | 🔄 | 리포팅을 위한 데이터 형태 변환 (행  열) | `PIVOT`/`UNPIVOT` 개념 이해, `GROUP BY`를 응용한 데이터 차원 변경 능력 |
+| **Step 6** | **서브쿼리와 필터링** | 🔍 | 복합 조건 및 데이터 간의 존재 여부 판단 | **상관 서브쿼리**, `EXISTS`, `IN` 등을 활용한 메인 쿼리와의 논리적 연결 제어 |
+| **Step 7** | **데이터 가공 함수** | 🎨 | 최종 출력을 위한 포맷팅 (Presentation) | 문자열 자르기(`SPLIT`), 날짜 변환(`TO_CHAR`) 등 데이터 시각화를 위한 전처리 |
+| **Step 8** | **복합 데이터 타입** | 📦 | 관계형 DB 내 비정형 데이터(NoSQL) 처리 | **JSON 파싱**(`->>`) 및 배열 처리 등 최신 DB 트렌드에 맞춘 하이브리드 쿼리 작성 |
 
 ---
 
 ### 📝 SQL 문제
 
-#### 🥉 Lv.1 Bronze (기초 체력)
+#### 🥉 Lv.1 Bronze (기초 체력) (단일 테이블 조회 및 단순 필터링) (기본적인 `SELECT`, `WHERE` 문법 이해 및 단순 조건절 작성 능력)
 
 *기본적인 데이터 추출 및 단순 현상 파악 업무입니다.*
 
-* **[Step 1]** [배우별 출연작 장르 다양성 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/7)
-* **[Step 3]** [대용량 테이블 전체 조회(Full Scan) 발생 원인 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/40)
-* **[Step 3]** [특정 쿼리의 성능 저하 병목 구간 진단](https://github.com/Lustiora/ANSI_SQL_TEST/issues/42)
-* **[Step 3]** [인덱스 적용 실패 및 비효율적 스캔 원인 규명](https://github.com/Lustiora/ANSI_SQL_TEST/issues/44)
-* **[Step 4]** [심판별 채점 결과 비교 데이터 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/61)
+* **[Step 1 🏗️]** [배우별 출연작 장르 다양성 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/7)
+* **[Step 3 ⚡]** [대용량 테이블 전체 조회(Full Scan) 발생 원인 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/40)
+* **[Step 3 ⚡]** [특정 쿼리의 성능 저하 병목 구간 진단](https://github.com/Lustiora/ANSI_SQL_TEST/issues/42)
+* **[Step 3 ⚡]** [인덱스 적용 실패 및 비효율적 스캔 원인 규명](https://github.com/Lustiora/ANSI_SQL_TEST/issues/44)
+* **[Step 4 📈]** [심판별 채점 결과 비교 데이터 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/61)
 
-#### 🥈 Lv.2 Silver (데이터 가공)
+#### 🥈 Lv.2 Silver (데이터 가공) (기초적인 데이터 집계 및 가공) (`GROUP BY`, 내장 함수(문자열/날짜)를 활용한 1차원적인 데이터 요약 능력)
 
 *데이터를 정리하여 통계 지표를 만드는 업무입니다.*
 
-* **[Step 2]** [카테고리별 평균 연체 기간 현황 파악](https://github.com/Lustiora/ANSI_SQL_TEST/issues/3)
-* **[Step 2]** [장기 미활동(Churn) 예상 고객 리스트 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/28)
-* **[Step 2]** [회원 가입 이메일 도메인 점유율 통계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/32)
-* **[Step 2]** [영화별 전체 출연진 목록(Cast List) 정리](https://github.com/Lustiora/ANSI_SQL_TEST/issues/34)
-* **[Step 5]** [보고서 작성을 위한 서식 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
-* **[Step 7]** [보고서 작성을 위한 날짜 표기 형식 표준화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/81)
+* **[Step 2 🧹]** [카테고리별 평균 연체 기간 현황 파악](https://github.com/Lustiora/ANSI_SQL_TEST/issues/3)
+* **[Step 2 🧹]** [장기 미활동(Churn) 예상 고객 리스트 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/28)
+* **[Step 2 🧹]** [회원 가입 이메일 도메인 점유율 통계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/32)
+* **[Step 2 🧹]** [영화별 전체 출연진 목록(Cast List) 정리](https://github.com/Lustiora/ANSI_SQL_TEST/issues/34)
+* **[Step 5 🔄]** [보고서 작성을 위한 서식 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/73)
+* **[Step 7 🎨]** [보고서 작성을 위한 날짜 표기 형식 표준화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/81)
 
-#### 🥇 Lv.3 Gold (논리적 연결)
+#### 🥇 Lv.3 Gold (논리적 연결) (복합 논리 설계 및 다중 테이블 결합) (`JOIN`, `HAVING`, 서브쿼리 등 2개 이상의 개념을 조합하여 데이터 관계를 파악하는 능력)
 
 *여러 데이터를 조합하여 비즈니스 인사이트를 도출하거나, 성능 이슈를 해결하는 단계입니다.*
 
-* **[Step 1]** [해외 지사별 매출 효율성 및 기여도 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/5)
-* **[Step 1]** [대륙별 물류 창고 재고 자산 가치 평가](https://github.com/Lustiora/ANSI_SQL_TEST/issues/9)
-* **[Step 2]** [우수 고객(VIP) 구매 패턴 기반 그룹핑](https://github.com/Lustiora/ANSI_SQL_TEST/issues/26)
-* **[Step 3]** [조회 시나리오별 최적 인덱스 선정 전략](https://github.com/Lustiora/ANSI_SQL_TEST/issues/46)
-* **[Step 3]** [게시판 목록 로딩 지연 현상 해결](https://github.com/Lustiora/ANSI_SQL_TEST/issues/48)
-* **[Step 3]** [복합 조건 조회 시 발생하는 속도 저하 개선](https://github.com/Lustiora/ANSI_SQL_TEST/issues/52)
-* **[Step 3]** [댓글 조회 서비스의 시스템 CPU 부하 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/54)
-* **[Step 4]** [회원별 최근 대여 기록 조회](https://github.com/Lustiora/ANSI_SQL_TEST/issues/36)
-* **[Step 4]** [고객별 평균 재구매 주기 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/38)
-* **[Step 4]** [일별 전체 매출 추세 모니터링 리포트](https://github.com/Lustiora/ANSI_SQL_TEST/issues/59)
-* **[Step 4]** [부서별 급여 상위 구간 직원 현황](https://github.com/Lustiora/ANSI_SQL_TEST/issues/63)
-* **[Step 4]** [일일 방문자 증감(Diff) 추이 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/65)
-* **[Step 5]** [데이터 구조 변환](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
-* **[Step 6]** [일별 매출 합산 후 평균 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/79)
+* **[Step 1 🏗️]** [해외 지사별 매출 효율성 및 기여도 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/5)
+* **[Step 1 🏗️]** [대륙별 물류 창고 재고 자산 가치 평가](https://github.com/Lustiora/ANSI_SQL_TEST/issues/9)
+* **[Step 2 🧹]** [우수 고객(VIP) 구매 패턴 기반 그룹핑](https://github.com/Lustiora/ANSI_SQL_TEST/issues/26)
+* **[Step 3 ⚡]** [조회 시나리오별 최적 인덱스 선정 전략](https://github.com/Lustiora/ANSI_SQL_TEST/issues/46)
+* **[Step 3 ⚡]** [게시판 목록 로딩 지연 현상 해결](https://github.com/Lustiora/ANSI_SQL_TEST/issues/48)
+* **[Step 3 ⚡]** [복합 조건 조회 시 발생하는 속도 저하 개선](https://github.com/Lustiora/ANSI_SQL_TEST/issues/52)
+* **[Step 3 ⚡]** [댓글 조회 서비스의 시스템 CPU 부하 최적화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/54)
+* **[Step 4 📈]** [회원별 최근 대여 기록 조회](https://github.com/Lustiora/ANSI_SQL_TEST/issues/36)
+* **[Step 4 📈]** [고객별 평균 재구매 주기 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/38)
+* **[Step 4 📈]** [일별 전체 매출 추세 모니터링 리포트](https://github.com/Lustiora/ANSI_SQL_TEST/issues/59)
+* **[Step 4 📈]** [부서별 급여 상위 구간 직원 현황](https://github.com/Lustiora/ANSI_SQL_TEST/issues/63)
+* **[Step 4 📈]** [일일 방문자 증감(Diff) 추이 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/65)
+* **[Step 5 🔄]** [데이터 구조 변환](https://github.com/Lustiora/ANSI_SQL_TEST/issues/71)
+* **[Step 6 🔍]** [일별 매출 합산 후 평균 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/79)
 
-#### 🔶 Lv.4 Platinum (고급 테크닉 & 최적화)
+#### 🔶 Lv.4 Platinum (고급 테크닉 & 최적화) (실행 계획 최적화 및 데이터 구조 변형) (인덱스 원리 이해(최적화), `PIVOT`, 윈도우 함수 심화 등 데이터의 물리적/논리적 구조를 제어하는 능력)
 
 *복잡한 분석 요구사항을 처리하거나, 까다로운 성능 문제를 튜닝하는 단계입니다.*
 
-* **[Step 2]** [제품 라인별 고수익 프리미엄 상품군 식별](https://github.com/Lustiora/ANSI_SQL_TEST/issues/13)
-* **[Step 2]** [VIP 고객 세그먼트별 구매 성향 심층 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/17)
-* **[Step 3]** [옵티마이저 실행 계획 이상(Anomaly) 점검](https://github.com/Lustiora/ANSI_SQL_TEST/issues/50)
-* **[Step 3]** [대용량 과거 로그 데이터 조회 속도 개선](https://github.com/Lustiora/ANSI_SQL_TEST/issues/56)
-* **[Step 4]** [영업 사원별 주력 판매 카테고리 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/1)
-* **[Step 4]** [월간 매출 성장률(MoM) 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/11)
-* **[Step 4]** [라인별 재고 부족 위험군 조기 탐지](https://github.com/Lustiora/ANSI_SQL_TEST/issues/15)
-* **[Step 4]** [연도별 베스트셀러 및 매출 비중 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/19)
-* **[Step 5]** [매장별 가격대 선호도 매트릭스 구성](https://github.com/Lustiora/ANSI_SQL_TEST/issues/30)
-* **[Step 5]** [임원 보고용 대시보드 데이터 포맷팅](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
-* **[Step 5]** [접속 로그(User Agent) 파싱 및 환경 데이터 구조화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/77)
-* **[Step 6]** [구매 이력이 존재하는 실사용 고객 명단 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/75)
+* **[Step 2 🧹]** [제품 라인별 고수익 프리미엄 상품군 식별](https://github.com/Lustiora/ANSI_SQL_TEST/issues/13)
+* **[Step 2 🧹]** [VIP 고객 세그먼트별 구매 성향 심층 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/17)
+* **[Step 3 ⚡]** [옵티마이저 실행 계획 이상(Anomaly) 점검](https://github.com/Lustiora/ANSI_SQL_TEST/issues/50)
+* **[Step 3 ⚡]** [대용량 과거 로그 데이터 조회 속도 개선](https://github.com/Lustiora/ANSI_SQL_TEST/issues/56)
+* **[Step 4 📈]** [영업 사원별 주력 판매 카테고리 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/1)
+* **[Step 4 📈]** [월간 매출 성장률(MoM) 지표 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/11)
+* **[Step 4 📈]** [라인별 재고 부족 위험군 조기 탐지](https://github.com/Lustiora/ANSI_SQL_TEST/issues/15)
+* **[Step 4 📈]** [연도별 베스트셀러 및 매출 비중 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/19)
+* **[Step 5 🔄]** [매장별 가격대 선호도 매트릭스 구성](https://github.com/Lustiora/ANSI_SQL_TEST/issues/30)
+* **[Step 5 🔄]** [임원 보고용 대시보드 데이터 포맷팅](https://github.com/Lustiora/ANSI_SQL_TEST/issues/69)
+* **[Step 5 🔄]** [접속 로그(User Agent) 파싱 및 환경 데이터 구조화](https://github.com/Lustiora/ANSI_SQL_TEST/issues/77)
+* **[Step 6 🔍]** [구매 이력이 존재하는 실사용 고객 명단 추출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/75)
 
-#### 💎 Lv.5 Diamond (알고리즘 & 마스터)
+#### 💎 Lv.5 Diamond (알고리즘 & 마스터) (알고리즘 구현 및 절차적 사고) (`RECURSIVE CTE`(재귀), 복잡한 비즈니스 로직(계층, 경로 분석)을 SQL로 구현하는 프로그래밍적 사고력)
 
 *계층 구조나 경로 분석 등 복잡한 로직을 구현해야 하는 최상위 업무입니다.*
 
-* **[Step 4]** [조직 계층을 반영한 팀별 누적 실적 집계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/21)
-* **[Step 4]** [관리자별 관할 지역 시장 점유율 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/24)
-* **[Step 4]** [전체 조직 구조의 계층(Depth) 측정](https://github.com/Lustiora/ANSI_SQL_TEST/issues/67)
+* **[Step 4 📈]** [조직 계층을 반영한 팀별 누적 실적 집계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/21)
+* **[Step 4 📈]** [관리자별 관할 지역 시장 점유율 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/24)
+* **[Step 4 📈]** [전체 조직 구조의 계층(Depth) 측정](https://github.com/Lustiora/ANSI_SQL_TEST/issues/67)
+* **[Step 8 📦]** [Chrome 사용자들의 월별 구매력 분석 보고서](https://github.com/Lustiora/ANSI_SQL_TEST/issues/83)
