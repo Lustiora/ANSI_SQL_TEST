@@ -134,4 +134,6 @@
 * **[Step 4 📈]** [조직 계층을 반영한 팀별 누적 실적 집계](https://github.com/Lustiora/ANSI_SQL_TEST/issues/21)
 * **[Step 4 📈]** [관리자별 관할 지역 시장 점유율 산출](https://github.com/Lustiora/ANSI_SQL_TEST/issues/24)
 * **[Step 4 📈]** [전체 조직 구조의 계층(Depth) 측정](https://github.com/Lustiora/ANSI_SQL_TEST/issues/67)
+* **[Step 4 📈]** [쇼핑몰 카테고리의 최상위 카테고리(Root) 찾기](https://github.com/Lustiora/ANSI_SQL_TEST/issues/89)
 * **[Step 8 📦]** [Chrome 사용자들의 월별 구매력 분석 보고서](https://github.com/Lustiora/ANSI_SQL_TEST/issues/83)
+* **[Step 8 📦]** [앱 버전 v2.0 신규 유저의 익월 재방문율 (Retention) 분석](https://github.com/Lustiora/ANSI_SQL_TEST/issues/91)
