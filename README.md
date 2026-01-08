@@ -28,6 +28,7 @@
 실습을 진행하면서 참고하면 좋은 도구와 문서입니다.
 
 * **SQL 클라이언트 도구:** [DBeaver](https://dbeaver.io/) (추천)
+* **SQL 검사:** [Aiven](https://aiven.io/tools/sql-syntax-checker)
 * **PostgreSQL 튜토리얼:** [w3schools PostgreSQL Tutorial](https://www.w3schools.com/postgresql/index.php)
 * **문법 비교:** [DBMS별 사용 가능 구문 정리](https://www.sql-workbench.eu/dbms_comparison.html)
 * **심화 학습:** [PostgreSQL 성능 최적화 가이드](https://edbkorea.com/blog/postgresql-oltp-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94/)
