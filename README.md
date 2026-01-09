@@ -13,11 +13,8 @@
 1. [MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/)
 2. [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
 3. [Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/)
-<<<<<<< HEAD
-=======
 
 ---
->>>>>>> 3420ea913e1262fc0ce8e8bb566eec8bb5342a55
 
 ## 2. 📌 참고 및 주의사항
 
