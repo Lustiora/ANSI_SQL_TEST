@@ -2,6 +2,8 @@
 
 이 프로젝트는 **PostgreSQL**을 기반으로 다양한 스키마의 데이터베이스를 활용하여 SQL 역량을 향상하는 것을 목표로 합니다.
 
+---
+
 ## 1. 사용 DBMS 및 데이터베이스 (Database)
 
 실습은 **PostgreSQL** 환경에서 진행되며, 아래 3가지 샘플 데이터베이스를 사용합니다.
@@ -11,6 +13,11 @@
 1. [MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/)
 2. [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
 3. [Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/)
+<<<<<<< HEAD
+=======
+
+---
+>>>>>>> 3420ea913e1262fc0ce8e8bb566eec8bb5342a55
 
 ## 2. 📌 참고 및 주의사항
 
@@ -23,6 +30,8 @@
 * **힌트 정책:** 단계(Step)와 난이도가 상승할수록, 문제 해결 능력을 기르기 위해 힌트는 제공되지 않습니다.
 * **프로젝트 목표:** [튜닝 : DB 엔진의 물리적 동작 방식을 이용하여 극한의 성능 추구](https://github.com/Lustiora/ANSI_SQL_TEST/issues/58)
 
+---
+
 ## 3. 📚 유용한 도구 및 참고 자료
 
 실습을 진행하면서 참고하면 좋은 도구와 문서입니다.
@@ -32,6 +41,8 @@
 * **PostgreSQL 튜토리얼:** [w3schools PostgreSQL Tutorial](https://www.w3schools.com/postgresql/index.php)
 * **문법 비교:** [DBMS별 사용 가능 구문 정리](https://www.sql-workbench.eu/dbms_comparison.html)
 * **심화 학습:** [PostgreSQL 성능 최적화 가이드](https://edbkorea.com/blog/postgresql-oltp-%EC%84%B1%EB%8A%A5-%EC%B5%9C%EC%A0%81%ED%99%94/)
+
+---
 
 ## 4. ✅ 사전 권장 문제 (Warm-up)
 
