@@ -8,9 +8,9 @@
 
 * **DBMS:** [PostgreSQL](https://www.postgresql.org/)
 * **실습용 DB 목록:**
-1. **ClassicModelsShop** ([MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/))
-2. **DVDRental** ([PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/))
-3. **Yongmazon** ([Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/))
+1. [MySQL Sample Database](https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/)
+2. [PostgreSQL Sample Database](https://www.postgresqltutorial.com/postgresql-sample-database/)
+3. [Oracle Sample Database](https://www.oracletutorial.com/getting-started/oracle-sample-database/)
 
 ## 2. 📌 참고 및 주의사항
 
@@ -44,16 +44,16 @@
 
 ### 📚 SQL 학습 커리큘럼
 
-| 스텝 | 주제 (Title) |  | 상세 기술 정의 | 요구 역량 |
-| --- | --- | --- | --- | --- |
-| **Step 1** | **논리적 구조화** | 🏗️ | 정규화된 테이블에서의 정확한 데이터 추출 | ERD(개체 관계) 이해, `JOIN`(Inner/Outer) 및 기초 집계(`GROUP BY`) 능력 |
-| **Step 2** | **가독성과 효율성** | 🧹 | 유지보수가 쉽고 논리적인 쿼리 작성 | `CTE`(With절) 활용, `CASE WHEN`을 통한 조건 분기, 가독성 높은 코드 습관 |
-| **Step 3** | **물리적 최적화** | ⚡ | DB 내부 동작 원리를 고려한 성능 튜닝 | 인덱스(Index) 구조 이해, **SARGable**(인덱스 태우기) 쿼리 작성, 실행 계획 분석 |
-| **Step 4** | **고급 분석** | 📈 | 순서와 흐름, 순위를 다루는 심화 통계 | **Window Function**(`RANK`, `LAG`, `LEAD`) 및 `PARTITION BY` 활용 능력 |
-| **Step 5** | **데이터 재구조화** | 🔄 | 리포팅을 위한 데이터 형태 변환 (행  열) | `PIVOT`/`UNPIVOT` 개념 이해, `GROUP BY`를 응용한 데이터 차원 변경 능력 |
-| **Step 6** | **서브쿼리와 필터링** | 🔍 | 복합 조건 및 데이터 간의 존재 여부 판단 | **상관 서브쿼리**, `EXISTS`, `IN` 등을 활용한 메인 쿼리와의 논리적 연결 제어 |
-| **Step 7** | **데이터 가공 함수** | 🎨 | 최종 출력을 위한 포맷팅 (Presentation) | 문자열 자르기(`SPLIT`), 날짜 변환(`TO_CHAR`) 등 데이터 시각화를 위한 전처리 |
-| **Step 8** | **복합 데이터 타입** | 📦 | 관계형 DB 내 비정형 데이터(NoSQL) 처리 | **JSON 파싱**(`->>`) 및 배열 처리 등 최신 DB 트렌드에 맞춘 하이브리드 쿼리 작성 |
+| 스텝 | 주제 (Title) | 상세 기술 정의 | 요구 역량 |
+| --- | --- | --- | --- |
+| **Step 1** 🏗️ | **논리적 구조화** | 정규화된 테이블에서의 정확한 데이터 추출 | ERD(개체 관계) 이해, `JOIN`(Inner/Outer) 및 기초 집계(`GROUP BY`) 능력 |
+| **Step 2** 🧹 | **가독성과 효율성** | 유지보수가 쉽고 논리적인 쿼리 작성 | `CTE`(With절) 활용, `CASE WHEN`을 통한 조건 분기, 가독성 높은 코드 습관 |
+| **Step 3** ⚡ | **물리적 최적화** | DB 내부 동작 원리를 고려한 성능 튜닝 | 인덱스(Index) 구조 이해, **SARGable**(인덱스 태우기) 쿼리 작성, 실행 계획 분석 |
+| **Step 4** 📈 | **고급 분석** | 순서와 흐름, 순위를 다루는 심화 통계 | **Window Function**(`RANK`, `LAG`, `LEAD`) 및 `PARTITION BY` 활용 능력 |
+| **Step 5** 🔄 | **데이터 재구조화** | 리포팅을 위한 데이터 형태 변환 (행  열) | `PIVOT`/`UNPIVOT` 개념 이해, `GROUP BY`를 응용한 데이터 차원 변경 능력 |
+| **Step 6** 🔍 | **서브쿼리와 필터링** | 복합 조건 및 데이터 간의 존재 여부 판단 | **상관 서브쿼리**, `EXISTS`, `IN` 등을 활용한 메인 쿼리와의 논리적 연결 제어 |
+| **Step 7** 🎨 | **데이터 가공 함수** | 최종 출력을 위한 포맷팅 (Presentation) | 문자열 자르기(`SPLIT`), 날짜 변환(`TO_CHAR`) 등 데이터 시각화를 위한 전처리 |
+| **Step 8** 📦 | **복합 데이터 타입** | 관계형 DB 내 비정형 데이터(NoSQL) 처리 | **JSON 파싱**(`->>`) 및 배열 처리 등 최신 DB 트렌드에 맞춘 하이브리드 쿼리 작성 |
 
 ---
 
